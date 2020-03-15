@@ -1,0 +1,99 @@
+01. Number Pyramid
+-----------------------
+number = int(input())
+n = 1
+printable = ''
+is_n_bigger_than_number = False
+for row in range(1, number + 1):
+  for col in range ( 1, row + 1):
+    
+    if n > number:
+      is_n_bigger_than_number = True
+      break
+    print(str(n) + ' ', end='')
+    n = n + 1
+
+  if is_n_bigger_than_number:
+    break
+  print()
+=======================
+02. Equal Sums Even Odd Position
+-----------------------
+start_number = int(input())
+stop_number = int(input())
+for number in range(start_number, stop_number+1):
+  #string_number = str(number)
+  even_sum = 0
+  odd_sum = 0
+  for index, digit in enumerate(str(number)):
+    if index % 2 == 0:
+      even_sum += int(digit)
+    else:
+      odd_sum += int(digit)
+  if even_sum == odd_sum:
+    print(number, end=' ')
+========================
+03. Sum Prime Non Prime
+-----------------------
+command = ''
+prime_sum = not_prime_sum = 0
+while command != "stop":
+  command = input()
+  if command != "stop":
+    number = int(command)
+    if number > 2: 
+      for i in range(2, number): 
+        if (number % i) == 0: 
+          not_prime_sum += number 
+          break
+      else:
+        prime_sum += number
+    elif number == 1 or number == 2:
+      prime_sum += number 
+    elif number == 0:
+      not_prime_sum += number
+    else: 
+      print("Number is negative.") 
+print(f"Sum of all prime numbers is: {prime_sum}")
+print(f"Sum of all non prime numbers is: {not_prime_sum}")
+=======================
+04. Train The Trainers
+-----------------------
+teachers = int(input())
+command = ''
+all_evaluation = 0
+count = 0
+while command != "Finish":
+  command = input()
+  if command != "Finish":
+    presentation = command
+    evaluation = 0
+    for i in range(teachers):
+      count += 1
+      evaluation += float(input())
+    all_evaluation += evaluation
+    print(f"{presentation} - {(evaluation / teachers):.2f}.")
+print(f"Student's final assessment is {(all_evaluation / count) :.2f}.")
+=======================
+05. Password Generator
+-----------------------
+n = int(input())
+l = int(input())
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for simbol1 in range(1, n+ 1):
+  for simbol2 in range(1, n + 1):
+    for index, simbol3 in enumerate(alphabet):
+      if index >= l:
+          break
+      for index, simbol4 in enumerate(alphabet):
+        if index >= l:
+          break
+        else:
+          for simbol5 in range(1, n + 1):
+            if simbol5 > simbol1 and simbol5 > simbol2 :
+              print(f"{simbol1}{simbol2}{simbol3}{simbol4}{simbol5}" + " ", end = '')
+=======================
+06. Special Numbers
+-----------------------
+
+=======================

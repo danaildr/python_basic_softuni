@@ -1,0 +1,113 @@
+01. Numbers from 1 to 100
+--------------------
+for n in range (0, 100):
+  print(n+1)
+====================
+02. Numbers N...1
+--------------------
+number = int(input())
+for n in range (number, 0, -1):
+  print(n)
+====================
+03. Numbers 1...N with Step 3
+--------------------
+number = int(input())
+for n in range (1, number + 1, 3):
+  print(n)
+====================
+04. Even Powers of 2
+--------------------
+import math
+
+number = int(input())
+for i in range (0, number +1):
+  if i %2 == 0:
+    powered=math.pow(2, i)
+    print(f"{powered:.0f}")
+====================
+05. Character Sequence
+--------------------
+word = input()
+for i in (word):
+  print(i)
+====================
+06. Vowels Sum
+--------------------
+word = input()
+char_sum = 0
+for char in word:
+  if char == "a":
+    char_sum = char_sum + 1
+  elif char == "e":
+    char_sum = char_sum + 2
+  elif char == "i":
+    char_sum = char_sum + 3
+  elif char == "o":
+    char_sum = char_sum + 4
+  elif char == "u":
+    char_sum = char_sum + 5
+
+print(char_sum)
+====================
+07. Sum Numbers
+--------------------
+number_ot_integer = int(input())
+sum = 0
+for i in range ( 0, number_ot_integer):
+  number = int(input())
+  sum = sum + number
+print(sum)
+====================
+08. Number sequence
+--------------------
+import sys
+number_ot_integer = int(input())
+min_int = sys.maxsize
+max_int = -sys.maxsize
+for i in range ( 0, number_ot_integer):
+  number = int(input())
+  if number > max_int:
+    max_int = number
+  if number < min_int:
+    min_int = number
+print(f"Max number: {max_int}")
+print(f"Min number: {min_int}")
+====================
+09. Left and Right Sum
+--------------------
+number_ot_integer = int(input())
+left_sum = 0
+right_sum = 0
+for i in range ( 0, number_ot_integer):
+  number = int(input())
+  left_sum = left_sum + number
+for i in range ( 0, number_ot_integer):
+  number = int(input())
+  right_sum = right_sum + number
+
+diff = abs(left_sum - right_sum)
+if diff == 0:
+  print(f"Yes, sum = {left_sum}")
+else:
+  print(f"No, diff = {diff}")
+====================
+10. Odd Even Sum
+--------------------
+number_ot_integer = int(input())
+odd_sum = 0
+even_sum = 0
+for i in range ( 0, number_ot_integer):
+  number = int(input())
+  if i % 2 == 0:
+    odd_sum = odd_sum+ number
+  else:
+    even_sum = even_sum + number
+  
+diff = abs(odd_sum - even_sum)
+if diff == 0:
+  print("Yes")
+  print(f"Sum = {odd_sum}")
+else:
+  print("No")
+  print(f"Diff = {diff}")
+====================

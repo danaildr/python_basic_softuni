@@ -1,0 +1,256 @@
+01. Day of Week
+-----------------
+day = int(input())
+if day == 1:
+  print("Monday")
+elif day == 2:
+  print("Tuesday")
+elif day == 3:
+  print("Wednesday")
+elif day == 4:
+  print("Thursday")
+elif day == 5:
+  print("Friday")
+elif day == 6:
+  print("Saturday")
+elif day == 7:
+  print("Sunday")
+else:
+  print("Error")
+=================
+02. Animal Type
+-----------------
+animal = input()
+
+if animal == "dog":
+  print("mammal")
+elif animal == "crocodile" or animal == "tortoise" or animal == "snake":
+  print("reptile")
+else:
+  print("unknown")
+=================
+03. Personal Titles
+-----------------
+age = float(input())
+sex = input()
+if sex == "m":
+  if age >= 16:
+    print("Mr.")
+  else:
+    print("Master")
+elif sex == "f":
+  if age >= 16:
+    print("Ms.")
+  else:
+    print("Miss")
+=================
+04. Small Shop
+-----------------
+product = input()
+city = input()
+quantity = float(input())
+price = 0
+
+if city =="Sofia":
+  if product == "coffee":
+    price = quantity * 0.50
+  elif product == "water":
+    price = quantity * 0.80
+  elif product == "beer":
+    price = quantity * 1.20
+  elif product == "sweets":
+    price = quantity * 1.45
+  elif product == "peanuts":
+    price = quantity * 1.60
+elif city == "Plovdiv":
+  if product == "coffee":
+    price = quantity * 0.40
+  elif product == "water":
+    price = quantity*0.70
+  elif product == "beer":
+    price = quantity * 1.15
+  elif product == "sweets":
+    price = quantity * 1.30
+  elif product == "peanuts":
+    price = quantity * 1.50 
+elif city == "Varna":
+  if product == "coffee":
+    price = quantity * 0.45
+  elif product == "water":
+    price = quantity * 0.70
+  elif product == "beer":
+    price = quantity * 1.10
+  elif product == "sweets":
+    price = quantity * 1.35
+  elif product == "peanuts":
+    price = quantity * 1.55 
+print(price)
+=================
+05. Number in Range
+-----------------
+number = int(input())
+
+if -100 <= number <= 100 and number !=0 :
+  print("Yes")
+else:
+  print("No")
+=================
+06. Fruit or Vegetable
+-----------------
+product = input()
+
+if product == "banana" or product == "apple" or product =="kiwi" or product =="cherry" or product =="lemon" or product =="grapes":
+  print("fruit")
+elif product == "tomato" or product == "cucumber" or product =="pepper" or product =="carrot":
+  print("vegetable")
+else:
+  print("unknown")
+=================
+07. Invalid Number
+-----------------
+number = int(input())
+
+if 100 <= number <= 200 or number == 0 :
+  number = number
+else:
+  print("invalid")
+=================
+08. Fruit Shop
+-----------------
+fruit = input()
+day = input()
+quantity = float(input())
+price = 0
+
+if day == "Monday" or day == "Tuesday" or day == "Wednesday" or day == "Thursday" or day =="Friday":
+    if fruit == "banana":
+        price = quantity * 2.50
+    elif fruit == "apple":
+        price = quantity * 1.20
+    elif fruit == "orange":
+        price = quantity * 0.85
+    elif fruit == "grapefruit":
+        price = quantity * 1.45
+    elif fruit =="kiwi":
+        price = quantity * 2.70
+    elif fruit == "pineapple":
+        price = quantity * 5.50
+    elif fruit == "grapes":
+        price = quantity * 3.85
+    else :
+        price = -1
+elif day == "Saturday" or day == "Sunday":
+    if fruit == "banana":
+        price = quantity * 2.70
+    elif fruit == "apple":
+        price = quantity * 1.25
+    elif fruit == "orange":
+        price = quantity * 0.90
+    elif fruit == "grapefruit":
+        price = quantity * 1.60
+    elif fruit =="kiwi":
+        price = quantity * 3.00
+    elif fruit == "pineapple":
+        price = quantity * 5.60
+    elif fruit == "grapes":
+        price = quantity * 4.20
+    else:
+        price = -1
+else:
+    price = -1
+
+if price == -1:
+    print("error")
+else:
+    print(f"{price:.2f}")
+=================
+09. Trade Commissions
+-----------------
+city = input()
+sales = float(input())
+commission = 0
+if 0 <= sales <= 500:
+  if city == "Sofia":
+    commission = sales * 5 / 100
+  elif city == "Varna":
+    commission = sales * 4.5 / 100
+  elif city == "Plovdiv":
+    commission = sales * 5.5 / 100
+  else:
+    commission = -1
+elif 500 < sales <= 1000:
+  if city == "Sofia":
+    commission = sales * 7 / 100
+  elif city == "Varna":
+    commission = sales * 7.5 / 100
+  elif city == "Plovdiv":
+    commission = sales * 8 / 100
+  else:
+    commission = -1
+elif 1000 < sales <= 10000:
+  if city == "Sofia":
+    commission = sales * 8 / 100
+  elif city == "Varna":
+    commission = sales * 10 / 100
+  elif city == "Plovdiv":
+    commission = sales * 12 / 100
+  else:
+    commission = -1
+elif sales > 10000:
+  if city == "Sofia":
+    commission = sales * 12 / 100
+  elif city == "Varna":
+    commission = sales * 13 / 100
+  elif city == "Plovdiv":
+    commission = sales * 14.5 / 100
+  else:
+    commission = -1
+else:
+  commission =-1
+
+
+if commission == -1:
+  print("error")
+else:
+  print(f"{commission:.2f}")
+=================
+10. Ski Trip
+-----------------
+days = int(input())
+accommodation = input()
+valuation = input()
+
+night = days -1
+one_night_price = 0
+discount = 0
+
+if accommodation == "room for one person":
+  one_night_price = 18.00
+elif accommodation == "apartment":
+  one_night_price = 25.00
+
+  if night < 10:
+    discount = 0.3
+  elif 10 <= night <= 15:
+    discount = 0.35
+  elif night > 15:
+    discount = 0.5
+
+elif accommodation == "president apartment":
+  one_night_price = 35.00
+
+  if night < 10:
+    discount = 0.1
+  elif 10 <= night <= 15:
+    discount = 0.15
+  elif night > 15:
+    discount = 0.2
+price = night * one_night_price
+price = price - price * discount
+if valuation == "positive":
+  price = price * 1.25
+elif valuation == "negative":
+  price = price * 0.9
+
+print(f"{price:.2f}")
+=================

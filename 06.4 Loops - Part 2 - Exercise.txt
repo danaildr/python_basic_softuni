@@ -1,0 +1,132 @@
+01. Old Books
+-----------------
+book = input()
+capacity = int(input())
+count = 1
+current_book = ""
+while current_book != book and count <= capacity:
+  current_book = input()
+  if current_book == book:
+    print(f"You checked {count - 1} books and found it.")
+  else:
+    count = count + 1
+
+if count > capacity:
+  print("The book you search is not here!")
+  print(f"You checked {capacity} books.")
+=================
+02. Exam Preparation
+-----------------
+max_fals = int(input())
+command = ""
+fals = 0
+score = 0
+number_of_problems = 0
+last_problem = ""
+while command != "Enough" and fals < max_fals:
+  command = input()
+  if command != "Enough":
+    current_score = int(input())
+    score = score + current_score
+    number_of_problems = number_of_problems + 1
+    last_problem = command
+  if current_score <= 4:
+    fals = fals + 1  
+avarage_score = score / number_of_problems
+if command == "Enough":
+  print(f"Average score: {avarage_score:.2f}")
+  print(f"Number of problems: {number_of_problems}")
+  print(f"Last problem: {last_problem}")
+if fals >= max_fals:
+  print(f"You need a break, {fals} poor grades.")
+=================
+03. Vacation
+-----------------
+need_money = float(input())
+real_money = float(input())
+five_day_spend = 0
+day = 0
+while five_day_spend < 5 and real_money < need_money:
+  command = input()
+  money = float(input())
+  day = day + 1
+  if command == "spend":
+    five_day_spend = five_day_spend + 1
+    real_money = real_money - money
+    if real_money <= 0:
+      real_money = 0
+  elif command == "save":
+    five_day_spend = 0
+    real_money = real_money + money
+if real_money >= need_money:
+  print(f"You saved the money for {day} days.")
+if five_day_spend == 5:
+  print("You can't save the money.")
+  print(day)
+=================
+04. Walking
+-----------------
+target = 10000
+stop = 0
+steps = 0
+
+while steps < target and stop < 1:
+  command = input()
+  if command == "Going home":
+    stop = stop + 1
+  else:
+    new_steps = int(command)
+    steps = steps + new_steps
+if steps >= target:
+  print("Goal reached! Good job!")
+if stop == 1:
+  new_steps = int(input())
+  steps = steps + new_steps
+  if steps >= target:
+    print("Goal reached! Good job!")
+  else:  
+    print(f"{target - steps} more steps to reach goal.")
+=================
+05. Coins
+-----------------
+resto = float(input())
+resto_in_cents = int(resto * 100)
+count = 0
+two_lv_coins = resto_in_cents // 200
+resto_in_cents = resto_in_cents - two_lv_coins*200
+one_lv_coins = resto_in_cents // 100
+resto_in_cents = resto_in_cents - one_lv_coins*100
+fifty_cents_coins = resto_in_cents // 50
+resto_in_cents = resto_in_cents - fifty_cents_coins * 50
+twenty_cent_coins = resto_in_cents // 20
+resto_in_cents = resto_in_cents - twenty_cent_coins*20
+ten_cent_coins = resto_in_cents // 10
+resto_in_cents = resto_in_cents - ten_cent_coins * 10
+five_cent_coins = resto_in_cents // 5
+resto_in_cents = resto_in_cents - five_cent_coins * 5
+two_cents_coins = resto_in_cents // 2
+resto_in_cents = resto_in_cents - two_cents_coins * 2
+oce_cent_coins = resto_in_cents
+
+coins = two_lv_coins + one_lv_coins + fifty_cents_coins + twenty_cent_coins + ten_cent_coins + five_cent_coins + two_cents_coins + oce_cent_coins
+print(coins)
+=================
+06. Cake
+-----------------
+w = int(input())
+h = int(input())
+area = w * h
+cake = 0
+command =""
+while cake < area and command != "STOP":
+  command = input()
+  if command != "STOP":
+    pieces = int(command)
+    cake = cake + pieces
+if cake < area:
+  print(f"{area - cake} pieces are left.")
+else:
+  print(f"No more cake left! You need {cake - area} pieces more.")
+=================
+
+

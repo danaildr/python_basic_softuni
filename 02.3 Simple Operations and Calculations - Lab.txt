@@ -1,0 +1,62 @@
+01. Greeting by Name
+---------------------
+name = input()
+print(f'Hello, {name}!')
+=====================
+02. Concatenate Data
+---------------------
+first_name = input()
+last_name = input()
+age = int(input())
+town = input()
+
+print(f'You are {first_name} {last_name}, a {age}-years old person from {town}.')
+=====================
+03. Square Area
+---------------------
+side = int(input())
+area = side * side
+print(area)
+=====================
+04. Inches to Centimeters
+---------------------
+inches = float(input())
+centimeters = inches * 2.54
+print(centimeters)
+=====================
+05. Projects Creation
+---------------------
+architect = input()
+project_count = int(input())
+project_hours = project_count * 3
+print(f'The architect {architect} will need {project_hours} hours to complete {project_count} project/s.')
+=====================
+06. Pet Shop
+---------------------
+dog_count = int(input())
+other_animal_count = int(input())
+dog_food_cost = dog_count * 2.5
+other_cost = other_animal_count * 4
+finale_cost = dog_food_cost + other_cost
+print(f'{finale_cost: .2f} lv.')
+=====================
+07. Yard Greening
+---------------------
+area_for_work = float(input())
+total_cost = area_for_work * 7.61
+discount = total_cost * 0.18
+finale_cost = total_cost - discount
+print(f'The final price is:{finale_cost: .2f} lv.')
+print(f'The discount is:{discount: .2f} lv.')
+=====================
+08. Fish Tank
+---------------------
+tank_x = int(input())
+tank_y = int(input())
+tank_z = int(input())
+persect_bussi = float(input())
+
+tank_capacity = tank_x * tank_y * tank_z * 0.001
+water_capacity = tank_capacity * (1 - (persect_bussi  * 0.01))
+print(f'{water_capacity:.3f}')
+=====================

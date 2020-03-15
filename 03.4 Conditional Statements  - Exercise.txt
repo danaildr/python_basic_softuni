@@ -1,0 +1,168 @@
+01. Sum Seconds
+---------------
+
+first_time = int(input())
+second_time = int(input())
+third_time = int(input())
+total_time = first_time + second_time + third_time
+minutes = total_time // 60
+seconds = total_time % 60
+if seconds < 10:
+  print(f'{minutes}:0{seconds}')
+else:
+  print(f'{minutes}:{seconds}')
+
+===============
+02. Bonus Score
+---------------
+
+points = int (input())
+bonus = 0
+if points <= 100:
+  bonus = bonus + 5
+elif points > 100 and points <= 1000:
+  bonus = points * 0.2
+else:
+  bonus =points * 0.1
+
+if points % 2 == 0:
+  bonus = bonus + 1
+elif points % 10 == 5:
+  bonus = bonus + 2
+
+if bonus == int(bonus):
+  bonus = int(bonus)
+
+
+print(bonus)
+print(points + bonus)
+
+===============
+03. Speed Info
+---------------
+
+peed = float(input())
+if speed <= 10:
+  print("slow")
+elif speed > 10 and speed <= 50:
+  print("average")
+elif speed > 50 and speed <= 150:
+  print("fast")
+elif speed > 150 and speed <= 1000:
+  print("ultra fast")
+else:
+  print("extremely fast")
+
+===============
+04. Metric Converter
+---------------
+
+input_score = float(input())
+in_measurement = input()
+out_measurement = input()
+
+score_in_mm = 0
+
+if in_measurement == "mm":
+  score_in_mm = input_score
+elif in_measurement == "cm":
+  score_in_mm = input_score * 10
+elif in_measurement == "m":
+  score_in_mm = input_score * 1000
+
+finale_score = 0
+if out_measurement == "mm":
+  finale_score = score_in_mm
+elif out_measurement == "cm":
+  finale_score = score_in_mm / 10
+elif out_measurement == "m":
+  finale_score = score_in_mm / 1000
+
+print(f"{finale_score:.3f}")
+
+===============
+05. Time + 15 Minutes
+---------------
+
+hour = int(input())
+minutes = int(input())
+
+finale_hour = hour
+finale_minutes = minutes + 15
+if finale_minutes >= 60:
+  finale_minutes = finale_minutes - 60
+  finale_hour = finale_hour + 1
+  if finale_hour == 24:
+    finale_hour = 0
+
+if finale_minutes < 10:
+  print(f'{finale_hour}:0{finale_minutes}')
+else:
+  print(f'{finale_hour}:{finale_minutes}')
+
+===============
+06. Godzilla vs. Kong
+---------------
+
+budget = float(input())
+statists = int(input())
+clothes_cost = float(input())
+
+decor_price = budget * 0.1
+statist_clothes_price = statists * clothes_cost
+if statists >150:
+  statist_clothes_price = statist_clothes_price * 0.9
+
+total_cost = decor_price + statist_clothes_price
+rest = abs(budget - total_cost)
+if budget >= total_cost:
+  print("Action!")
+  print(f"Wingard starts filming with {rest:.2f} leva left.")
+else:
+  print("Not enough money!")
+  print(f"Wingard needs {rest:.2f} leva more.")
+
+===============
+07. World Swimming Record
+---------------
+
+record = float(input())
+distance = float(input())
+time_for_meter = float(input())
+
+swimming_time = (distance * time_for_meter) + (distance // 15 * 12.5)
+
+time_diff = swimming_time - record
+if record > swimming_time:
+  print(f"Yes, he succeeded! The new world record is {swimming_time:.2f} seconds.")
+else:
+  print(f"No, he failed! He was {time_diff:.2f} seconds slower.")
+  
+===============
+08. Scholarship
+---------------
+
+import math
+income = float(input())
+average_success = float(input())
+minimal_salary = float(input())
+
+social_scholarship = minimal_salary * 0.35
+exellent_scholarship = average_success * 25
+
+
+if average_success <= 4.5:
+  print("You cannot get a scholarship!")
+elif average_success > 4.5 and average_success < 5.5 and  minimal_salary < income:
+  print("You cannot get a scholarship!")
+elif average_success > 4.5 and average_success < 5.5 and  minimal_salary > income:
+  print(f"You get a Social scholarship {math.floor(social_scholarship)} BGN")
+elif average_success >= 5.5 and income > minimal_salary:
+  print(f"You get a scholarship for excellent results {math.floor(exellent_scholarship)} BGN")
+else:
+  if social_scholarship <= exellent_scholarship:
+    print(f"You get a scholarship for excellent results {math.floor(exellent_scholarship)} BGN")
+  else:
+    print(f"You get a Social scholarship {math.floor(social_scholarship)} BGN")
+
+===============

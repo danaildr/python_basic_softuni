@@ -1,0 +1,111 @@
+01. Excellent Result
+----------------
+grade = float(input())
+excellent = 5.5
+if grade >= excellent:
+  print("Excellent!")
+================
+02. Greater Number
+----------------
+numb_one = int(input())
+numb_two = int(input())
+if numb_one >= numb_two:
+  print(numb_one)
+else:
+  print(numb_two)
+================
+03. Even or Odd
+----------------
+number = int(input())
+if number % 2 == 0:
+  print("even")
+else:
+  print("odd")
+================
+04. Number 1...9 to Text
+----------------
+number = int(input())
+if number > 9:
+  print("number too big")
+else:
+  if number == 1:
+    print("one")
+  if number == 2:
+    print("two")
+  if number == 3:
+    print("three")
+  if number == 4:
+    print("four")
+  if number == 5:
+    print("five")
+  if number == 6:
+    print("six")
+  if number == 7:
+    print("seven")
+  if number == 8:
+    print("eight")
+  if number == 9:
+    print("nine")
+================
+05. Number 100...200
+----------------
+number = int(input())
+if number < 100:
+  print("Less than 100")
+elif number > 200:
+  print("Greater than 200")
+else:
+  print("Between 100 and 200")
+================
+06. Password Guess
+----------------
+PASSWORD = "s3cr3t!P@ssw0rd"
+user_pass = input()
+if user_pass == PASSWORD:
+  print("Welcome")
+else:
+  print("Wrong password!")
+================
+07. Area of Figures
+----------------
+from math import pi
+area = 0.0
+figure = input()
+if figure == "square":
+  side = float(input())
+  area = side * side
+elif figure == "rectangle":
+  side_a = float(input())
+  side_b = float(input())
+  area = side_a * side_b
+elif figure == "circle":
+  radius = float(input())
+  area = pi * radius * radius
+elif figure == "triangle":
+  side = float(input())
+  heigth = float(input())
+  area = (side * heigth) / 2
+
+print(f"{area:.3f}")
+================
+08. Toy Shop
+----------------
+vacantion_price = float(input())
+pusles = int(input())
+dolls = int(input())
+bears = int(input())
+minions = int(input())
+mini_trucks = int(input())
+
+toys = pusles + dolls + bears + minions + mini_trucks
+money_earned = pusles * 2.60 + dolls * 3 + bears * 4.10 + minions * 8.20 + mini_trucks * 2
+
+if toys >= 50:
+  money_earned = money_earned - (money_earned * 0.25)
+money_earned = money_earned - (money_earned * 0.1)
+finale_money = abs(money_earned - vacantion_price)
+if money_earned >= vacantion_price:
+  print(f"Yes! {finale_money:.2f} lv left.")
+else:
+  print(f"Not enough money! {finale_money:.2f} lv needed.")
+================

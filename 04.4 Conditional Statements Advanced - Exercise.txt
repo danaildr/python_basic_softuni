@@ -1,0 +1,268 @@
+01. Point on Rectangle Border
+---------------------
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x = float(input())
+y = float(input())
+
+first_condition = (x == x1 or x == x2) and (y1 <= y <= y2)
+second_condition = ( y == y1 or y == y2) and (x1 <= x <= x2)
+
+if first_condition or second_condition:
+    print("Border")
+else:
+    print("Inside / Outside")
+=====================
+02. Cinema
+---------------------
+projection_type = input()
+rows = int(input())
+collumns = int(input())
+seets = rows * collumns
+total = 0
+if projection_type == "Premiere":
+    total = seets * 12.00
+elif projection_type == "Normal":
+    total = seets * 7.50
+elif projection_type == "Discount":
+    total = seets * 5.00
+
+print(f"{total:.2f} leva")
+=====================
+03. Summer Outfit 
+---------------------
+graduces = int(input())
+part_of_day = input()
+outfit = ""
+shoes = ""
+
+if part_of_day == "Morning":
+    if 10 <= graduces <= 18:
+        outfit = "Sweatshirt"
+        shoes = "Sneakers"
+    elif 18 < graduces <= 24:
+        outfit = "Shirt"
+        shoes = "Moccasins"
+    elif graduces >= 25:
+        outfit = "T-Shirt"
+        shoes = "Sandals"
+elif part_of_day == "Afternoon":
+    if 10 <= graduces <= 18:
+        outfit = "Shirt"
+        shoes = "Moccasins"
+    elif 18 < graduces <= 24:
+        outfit = "T-Shirt"
+        shoes = "Sandals"
+    elif graduces >= 25:
+        outfit = "Swim Suit"
+        shoes = "Barefoot"
+elif part_of_day == "Evening":
+    outfit = "Shirt"
+    shoes = "Moccasins"
+
+print(f"It's {graduces} degrees, get your {outfit} and {shoes}.")
+=====================
+04. New House
+---------------------
+flowers = input()
+count = int(input())
+budget = int(input())
+price = 0
+if flowers == "Roses":
+  price = count * 5.00
+  if count > 80:
+    price = price * 0.9
+elif flowers == "Dahlias":
+  price = count * 3.80
+  if count > 90:
+    price = price * 0.85
+elif flowers == "Tulips":
+  price = count * 2.80
+  if count > 80:
+    price = price * 0.85
+elif flowers == "Narcissus":
+  price = count * 3.00
+  if count < 120:
+    price = price * 1.15
+elif flowers == "Gladiolus":
+  price = count * 2.50
+  if count < 80:
+    price = price * 1.20
+
+left_or_nees_money = abs(budget - price)
+
+if budget >= price:
+  print (f"Hey, you have a great garden with {count} {flowers} and {left_or_nees_money:.2f} leva left.")
+else:
+  print(f"Not enough money, you need {left_or_nees_money:.2f} leva more.")
+=====================
+05. Fishing Boat
+---------------------
+budget = int(input())
+season = input()
+fishers = int(input())
+price = 0
+if season == "Spring":
+  price = 3000
+elif season == "Summer" or season == "Autumn":
+  price = 4200
+elif season == "Winter":
+  price = 2600
+
+if fishers <= 6 :
+  price = price * 0.90
+elif 7 <= fishers <= 11:
+  price = price * 0.85
+elif fishers >= 12:
+  price = price * 0.75
+
+if fishers % 2 == 0 and season != "Autumn":
+  price = price * 0.95
+
+left_or_need_money = abs(budget - price)
+
+if budget >= price :
+  print(f"Yes! You have {left_or_need_money:.2f} leva left.")
+else:
+  print(f"Not enough money! You need {left_or_need_money:.2f} leva.")
+=====================
+06. Journey
+---------------------
+budget = float(input())
+season = input()
+destination = ""
+type_of_vacantion = ""
+spent = 0
+if budget <= 100:
+  destination = "Bulgaria"
+  if season == "summer":
+    spent = budget * 0.30
+    type_of_vacantion = "Camp"
+  elif season == "winter":
+    spent = budget * 0.70
+    type_of_vacantion = "Hotel"
+elif 100 < budget <= 1000:
+  destination = "Balkans"
+  if season == "summer":
+    spent = budget * 0.40
+    type_of_vacantion = "Camp"
+  elif season == "winter":
+    spent = budget * 0.80
+    type_of_vacantion = "Hotel"
+elif budget > 1000:
+  destination = "Europe"
+  spent = budget * 0.90
+  type_of_vacantion = "Hotel"
+
+print(f"Somewhere in {destination}")
+print(f"{type_of_vacantion} - {spent:.2f}")
+=====================
+07. Operations Between Numbers
+---------------------
+n1 = int(input())
+n2 = int(input())
+operator = input()
+result = 0
+if operator == "/":
+  if n2 == 0:
+    print(f"Cannot divide {n1} by zero")
+  else:
+    result = n1 / n2
+    print(f"{n1} / {n2} = {result:.2f}")
+elif operator == "%":
+  if n2 == 0:
+    print(f"Cannot divide {n1} by zero")
+  else:
+    result = n1 % n2
+    print(f"{n1} % {n2} = {result}")
+elif operator == "+":
+  result = n1 + n2
+  if result % 2 == 0:
+    print(f"{n1} {operator} {n2} = {result} - even")
+  else:
+    print(f"{n1} {operator} {n2} = {result} - odd")
+elif operator == "-":
+  result = n1 - n2
+  if result % 2 == 0:
+    print(f"{n1} {operator} {n2} = {result} - even")
+  else:
+    print(f"{n1} {operator} {n2} = {result} - odd")
+elif operator == "*":
+  result = n1 * n2
+  if result % 2 == 0:
+    print(f"{n1} {operator} {n2} = {result} - even")
+  else:
+    print(f"{n1} {operator} {n2} = {result} - odd")
+=====================
+08. Hotel Room
+---------------------
+month = input()
+night = int(input())
+
+apartment_price = 0
+studio_price = 0
+
+if month == "May" or month == "October":
+  apartment_price = night * 65
+  studio_price = night * 50
+  if 7 < night <= 14:
+    studio_price = studio_price * 0.95
+  elif night > 14 :
+    studio_price = studio_price * 0.70
+    apartment_price = apartment_price * 0.90
+elif month == "June" or month == "September":
+  apartment_price = night * 68.70
+  studio_price = night * 75.20
+  if night > 14 :
+    studio_price = studio_price * 0.80
+    apartment_price = apartment_price * 0.90
+elif month == "July" or month == "August":
+  apartment_price = night * 77
+  studio_price = night * 76
+  if night > 14:
+    apartment_price = apartment_price * 0.90
+
+print(f"Apartment: {apartment_price:.2f} lv.")
+print(f"Studio: {studio_price:.2f} lv.")
+=====================
+09. On Time for the Exam
+---------------------
+exam_h = int(input())
+exam_min = int (input())
+current_h = int(input())
+current_min = int(input())
+
+exam_in_min = exam_h * 60 + exam_min
+current_in_min = current_h * 60 + current_min
+
+
+
+if current_in_min == exam_in_min:
+  print ("On time")
+elif current_in_min > exam_in_min:
+  print("Late")
+  if current_in_min - exam_in_min >= 60:
+    h = (current_in_min - exam_in_min) // 60
+    mm = (current_in_min - exam_in_min) % 60
+    if mm <10:
+        mm = "0"+ str(mm)
+    print(f"{h}:{mm} hours after the start")
+  else:
+    print(f"{current_in_min - exam_in_min} minutes after the start")
+elif current_in_min < exam_in_min:
+  if current_in_min + 30 < exam_in_min:
+    print ("Early")
+    if exam_in_min - current_in_min >= 60:
+      h = (exam_in_min - current_in_min) // 60
+      mm = (exam_in_min - current_in_min) % 60
+      if mm <10:
+        mm = "0"+ str(mm)
+      print(f"{h}:{mm} hours before the start")
+    else:
+      print(f"{exam_in_min - current_in_min} minutes before the start")
+  else:
+    print ("On time")
+    print(f"{exam_in_min - current_in_min} minutes before the start")
+=====================

@@ -1,0 +1,119 @@
+01. Read Text
+----------------
+input_text = input()
+
+while input_text != "Stop":
+  input_text = input()
+================
+02. Password
+----------------
+username = input()
+password = input()
+
+data = input()
+while data != password:
+  data = input()
+
+print(f"Welcome {username}!")
+================
+03. Sum Numbers
+----------------
+data = input()
+int_sum =0
+
+while data !="Stop":
+  int_sum = int_sum + int(data)
+  data = input()
+print(int_sum)
+================
+04. Sequence 2k+1
+----------------
+num = int(input())
+currnet_int = 1
+while currnet_int <= num:
+  print(currnet_int)
+  currnet_int = currnet_int * 2 + 1
+================
+05. Account Balance
+----------------
+increase_num = int(input())
+sum_increase = 0
+new_increase =0
+count =0
+while count < increase_num and new_increase >= 0:
+  new_increase = float(input())
+  if new_increase < 0:
+    print("Invalid operation!")
+  else:
+    print(f"Increase: {new_increase:.2f}")
+    sum_increase = sum_increase + new_increase
+    count = count + 1
+print(f"Total: {sum_increase:.2f}")
+================
+06. Max Number
+----------------
+import sys
+
+count = int(input())
+max_num = -sys.maxsize
+i = 0
+while i < count :
+  num = int(input())
+  if num > max_num:
+    max_num = num
+  i = i + 1
+print(max_num)
+================
+07. Min Number
+----------------
+import sys
+
+count = int(input())
+min_num = sys.maxsize
+i = 0
+while i < count :
+  num = int(input())
+  if num < min_num:
+    min_num = num
+  i = i + 1
+print(min_num)
+================
+08. Graduation
+----------------
+name = input()
+current_class = 0
+
+summing = 0
+while current_class < 12 :
+
+  current_score = float(input())
+  if current_score >= 4:
+    current_class = current_class + 1
+    summing = summing + current_score
+
+score = summing / current_class
+print (f"{name} graduated. Average grade: {score:.2f}")
+================
+09. Graduation pt.2
+----------------
+name = input()
+current_class = 1
+repairing = 0
+summing = 0
+while current_class <= 12 and repairing < 2:
+
+  current_score = float(input())
+  if current_score >= 4:
+    current_class = current_class + 1
+    summing = summing + current_score
+  else:
+    repairing = repairing + 1
+
+
+
+score = summing / 12
+if repairing < 2:
+  print (f"{name} graduated. Average grade: {score:.2f}")
+else:
+  print(f"{name} has been excluded at {current_class} grade")
+================
